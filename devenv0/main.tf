@@ -1,5 +1,5 @@
 provider "google" {
-    credentials = file("t2creds.json")
+#    credentials = file("t2creds.json")
     project = "ebrown-test"
     region = "us-west1"
 }
@@ -29,9 +29,9 @@ resource "google_compute_instance" "default" {
         }
     }
 
-    metadata = {
-        ssh-keys= "ebrown:${file("id_rsa.pub")}"
-    }
+#    metadata = {
+#        ssh-keys= "ebrown:${file("id_rsa.pub")}"
+#    }
 }
 
 output "ip" {
